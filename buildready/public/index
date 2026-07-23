@@ -11,7 +11,7 @@
     <header>
         <nav id="global-header">
             <div class="menu-container">
-                <a class="img-logo" href="homepage.html">
+                <a class="img-logo" href="homepage">
                     <img id="logo" src="./images/logo.svg" alt="BuildReady logo"/>
                 </a>
             </div>    
