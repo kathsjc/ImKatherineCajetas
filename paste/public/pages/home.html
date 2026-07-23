@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paste</title>
+  <link rel="stylesheet" href="../css/output.css">
+  <script src="../js/home.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>paste</h1>
+    <button id="settings-btn" class="icon-button">
+        <img src="../images/settings-icon.svg" alt="settings"/>
+    </button>
+  </header>
+
+  <div class="navigation-tabs">
+    <button class="tab active" data-tab="workers-tab" id="workersBtn">
+      <img src="../images/worker-icon.svg" alt="workers"/>
+      Workers
+    </button>
+    <button class="tab" data-tab="jobs-tab" id="jobsBtn">
+      <img src="../images/jobs-icon.svg" alt="jobs"/>
+      Jobs
+    </button>
+
+    <div class="toast" id="summarizer-complete">
+        <img src="../images/info-icon.svg" class="icon" alt="info"/>
+        <p><span>Summarizer</span> is now complete.</p>
+        <button><img src="../images/delete-icon.svg" alt="close"/></button>
+    </div>
+    <div class="toast" id="summarizer-delete">
+        <img src="../images/failed-icon.svg" class="icon" alt="warning"/>
+        <p><span>Summarizer</span> job was deleted.</p>
+        <button><img src="../images/delete-icon.svg" alt="close"/></button>
+    </div>
+    <div class="toast" id="summarizer-paste">
+        <img src="../images/check-circle-icon.svg" class="icon" alt="info"/>
+        <p>Succesfully copied to <span>Paste</span></p>
+        <button><img src="../images/delete-icon.svg" alt="close"/></button>
+    </div>
+    <div class="toast" id="summarizer-success">
+        <img src="../images/info-icon.svg" class="icon" alt="info"/>
+        <p>Succesfully deleted.</p>
+        <button><img src="../images/delete-icon.svg" alt="close"/></button>
+    </div>
+    <div class="toast" id="copy-success">
+        <img src="../images/info-icon.svg" class="icon" alt="info"/>
+        <p>Job successfully copied.</p>
+        <button><img src="../images/delete-icon.svg" alt="close"/></button>
+    </div>
+    <div class="toast" id="update-toast">
+      <img src="../images/info-icon.svg" class="icon" alt="info"/>
+      <p>Worker successfully updated.</p>
+      <button><img src="../images/delete-icon.svg" alt="close"/></button>
+    </div>
+  </div>
+  
+  <div class="content-container">
+    <div class="tab-content active" id="workers-tab">
+      <div class="worker-list">
+        <div class="worker-card">
+            <div class="content-header">
+                <button class="paste-button">
+                  <img src="../images/clipboard-icon.svg" alt="paste"/>
+                  Paste
+                </button>
+                <div class="status-indicator">
+                    <div class="status-complete">
+                        <img src="../images/check-icon.svg" alt="complete"/>
+                        <p>Completed</p>
+                    </div>
+                    <button class="status-arrow">
+                        <img src="../images/arrow.svg" alt="arrow"/>
+                    </button>
+                </div>
+            </div>
+            <div class="worker-content">
+                <div class="content-header">
+                    <h3 class="worker-title">Analyzer</h3>
+                    <button class="edit-button">
+                        <img src="../images/edit-icon.svg" alt="edit"/>
+                        Edit
+                    </button>
+                </div>
+                <p class="worker-description">The message sets a deadline to submit the report by Friday and asks the team to review client feedback before the meeting. Both tasks are high priority and should be completed promptly.</p>
+            </div>
+            <div class="recent-jobs">
+                <div class="content-header">
+                    <h3>Recent Jobs</h3>
+                    <a href="./view-all.html">View all</a>
+                </div>
+                <div class="recent-jobs-list">
+                    <div id="job-skeleton" class="job-skeleton">
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <div class="preload-date"></div>
+                                <div class="preload-btn"></div>
+                              </div>
+                              <div class="preload-description"></div>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <div class="preload-date"></div>
+                                <div class="preload-btn"></div>
+                              </div>
+                              <div class="preload-description"></div>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <div class="preload-date"></div>
+                                <div class="preload-btn"></div>
+                              </div>
+                              <div class="preload-description"></div>
+                        </div>
+                    </div>
+                    <div id="jobs-loaded" class="jobs-loaded">
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <p class="job-date">Jan 2, 2025 • 9:17:39 pm</p>
+                                <div class="status-indicator">
+                                    <button class="copy-button">
+                                      <img src="../images/copy-icon.svg" alt="copy"/>
+                                      Copy
+                                    </button>
+                                </div>
+                              </div>
+                              <p class="worker-description">The email highlights two main action items: finalizing the budget report by Friday and reviewing client feedback before the meeting. The priority level is high, as both tasks are time-sensitive.</p>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <p class="job-date">Jan 2, 2025 • 9:17:39 pm</p>
+                                <div class="status-indicator">
+                                    <button class="copy-button">
+                                      <img src="../images/copy-icon.svg" alt="copy"/>
+                                      Copy
+                                    </button>
+                                </div>
+                              </div>
+                              <p class="worker-description">The email highlights two main action items: finalizing the budget report by Friday and reviewing client feedback before the meeting. The priority level is high, as both tasks are time-sensitive.</p>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <p class="job-date">Jan 2, 2025 • 9:17:39 pm</p>
+                                <div class="status-indicator">
+                                    <button class="copy-button">
+                                      <img src="../images/copy-icon.svg" alt="copy"/>
+                                      Copy
+                                    </button>
+                                </div>
+                              </div>
+                              <p class="worker-description">The email highlights two main action items: finalizing the budget report by Friday and reviewing client feedback before the meeting. The priority level is high, as both tasks are time-sensitive.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="worker-list">
+        <div class="worker-card">
+            <div class="content-header">
+                <button class="paste-button">
+                  <img src="../images/clipboard-icon.svg" alt="paste"/>
+                  Paste
+                </button>
+                <div class="status-indicator">
+                    <div class="status-complete">
+                        <img src="../images/check-icon.svg" alt="complete"/>
+                        <p>Completed</p>
+                    </div>
+                    <button class="status-arrow">
+                        <img src="../images/arrow.svg" alt="arrow"/>
+                    </button>
+                </div>
+            </div>
+            <div class="worker-content">
+                <div class="content-header">
+                    <h3 class="worker-title">Note Enhancer</h3>
+                    <button class="edit-button">
+                        <img src="../images/edit-icon.svg" alt="edit"/>
+                        Edit
+                    </button>
+                </div>
+                <p class="worker-description">Organize and refine your notes for better clarity and structure.</p>
+            </div>
+            <div class="recent-jobs">
+                <div class="content-header">
+                    <h3>Recent Jobs</h3>
+                    <a href="./view-all.html">View all</a>
+                </div>
+                <div class="recent-jobs-list">
+                    <div id="job-skeleton" class="job-skeleton">
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <div class="preload-date"></div>
+                                <div class="preload-btn"></div>
+                              </div>
+                              <div class="preload-description"></div>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <div class="preload-date"></div>
+                                <div class="preload-btn"></div>
+                              </div>
+                              <div class="preload-description"></div>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <div class="preload-date"></div>
+                                <div class="preload-btn"></div>
+                              </div>
+                              <div class="preload-description"></div>
+                        </div>
+                    </div>
+                    <div id="jobs-loaded" class="jobs-loaded">
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <p class="job-date">Jan 2, 2025 • 9:17:39 pm</p>
+                                <div class="status-indicator">
+                                    <button class="copy-button">
+                                      <img src="../images/copy-icon.svg" alt="copy"/>
+                                      Copy
+                                    </button>
+                                </div>
+                              </div>
+                              <p class="worker-description">The email highlights two main action items: finalizing the budget report by Friday and reviewing client feedback before the meeting. The priority level is high, as both tasks are time-sensitive.</p>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <p class="job-date">Jan 2, 2025 • 9:17:39 pm</p>
+                                <div class="status-indicator">
+                                    <button class="copy-button">
+                                      <img src="../images/copy-icon.svg" alt="copy"/>
+                                      Copy
+                                    </button>
+                                </div>
+                              </div>
+                              <p class="worker-description">The email highlights two main action items: finalizing the budget report by Friday and reviewing client feedback before the meeting. The priority level is high, as both tasks are time-sensitive.</p>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <p class="job-date">Jan 2, 2025 • 9:17:39 pm</p>
+                                <div class="status-indicator">
+                                    <button class="copy-button">
+                                      <img src="../images/copy-icon.svg" alt="copy"/>
+                                      Copy
+                                    </button>
+                                </div>
+                              </div>
+                              <p class="worker-description">The email highlights two main action items: finalizing the budget report by Friday and reviewing client feedback before the meeting. The priority level is high, as both tasks are time-sensitive.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="worker-list">
+        <div class="worker-card">
+            <div class="content-header">
+                <button class="paste-button">
+                  <img src="../images/clipboard-icon.svg" alt="paste"/>
+                  Paste
+                </button>
+                <div class="status-indicator">
+                    <div class="status-processing">
+                        <img src="../images/clock-icon.svg" alt="processing"/>
+                        <p>Processing</p>
+                    </div>
+                    <button class="del-button">
+                        <img src="../images/delete-icon.svg" alt="delete"/>
+                      </button>
+                    <button class="status-arrow">
+                        <img src="../images/arrow.svg" alt="arrow"/>
+                    </button>
+                </div>
+            </div>
+            <div class="worker-content">
+                <div class="content-header">
+                    <h3 class="worker-title">Rewriter</h3>
+                    <button class="edit-button">
+                        <img src="../images/edit-icon.svg" alt="edit"/>
+                        Edit
+                    </button>
+                </div>
+                <p class="worker-description">Improve, simplify, or rephrase any text while keeping the original meaning.</p>
+            </div>
+            <div class="recent-jobs">
+                <div class="content-header">
+                    <h3>Recent Jobs</h3>
+                    <a href="./view-all.html">View all</a>
+                </div>
+                <div class="recent-jobs-list">
+                    <div id="job-skeleton" class="job-skeleton">
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <div class="preload-date"></div>
+                                <div class="preload-btn"></div>
+                              </div>
+                              <div class="preload-description"></div>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <div class="preload-date"></div>
+                                <div class="preload-btn"></div>
+                              </div>
+                              <div class="preload-description"></div>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <div class="preload-date"></div>
+                                <div class="preload-btn"></div>
+                              </div>
+                              <div class="preload-description"></div>
+                        </div>
+                    </div>
+                    <div id="jobs-loaded" class="jobs-loaded">
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <p class="job-date">Jan 2, 2025 • 9:17:39 pm</p>
+                                <div class="status-indicator">
+                                    <button class="copy-button">
+                                      <img src="../images/copy-icon.svg" alt="copy"/>
+                                      Copy
+                                    </button>
+                                </div>
+                              </div>
+                              <p class="worker-description">The email highlights two main action items: finalizing the budget report by Friday and reviewing client feedback before the meeting. The priority level is high, as both tasks are time-sensitive.</p>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <p class="job-date">Jan 2, 2025 • 9:17:39 pm</p>
+                                <div class="status-indicator">
+                                    <button class="copy-button">
+                                      <img src="../images/copy-icon.svg" alt="copy"/>
+                                      Copy
+                                    </button>
+                                </div>
+                              </div>
+                              <p class="worker-description">The email highlights two main action items: finalizing the budget report by Friday and reviewing client feedback before the meeting. The priority level is high, as both tasks are time-sensitive.</p>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <p class="job-date">Jan 2, 2025 • 9:17:39 pm</p>
+                                <div class="status-indicator">
+                                    <button class="copy-button">
+                                      <img src="../images/copy-icon.svg" alt="copy"/>
+                                      Copy
+                                    </button>
+                                </div>
+                              </div>
+                              <p class="worker-description">The email highlights two main action items: finalizing the budget report by Friday and reviewing client feedback before the meeting. The priority level is high, as both tasks are time-sensitive.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="worker-list">
+        <div class="worker-card">
+            <div class="content-header">
+                <button class="paste-button">
+                  <img src="../images/clipboard-icon.svg" alt="paste"/>
+                  Paste
+                </button>
+                <div class="status-indicator">
+                    <div class="status-failed">
+                        <img src="../images/failed-icon.svg" alt="failed"/>
+                        <p>Failed</p>
+                        <div class="bubble">
+                            <p>Oops! Something went wrong. This worker isn’t responding as expected. Try again in a moment, or refresh Paste to reset. If the issue persists, contact support for help!</p>
+                        </div>
+                    </div>
+                    <button class="status-arrow">
+                        <img src="../images/arrow.svg" alt="arrow"/>
+                    </button>
+                </div>
+            </div>
+            <div class="worker-content">
+                <div class="content-header">
+                    <h3 class="worker-title">Summarizer</h3>
+                    <button class="edit-button">
+                        <img src="../images/edit-icon.svg" alt="edit"/>
+                        Edit
+                    </button>
+                </div>
+                <p class="worker-description">Instantly condense articles, notes, or documents into key takeaways.</p>
+            </div>
+            <div class="recent-jobs">
+                <div class="content-header">
+                    <h3>Recent Jobs</h3>
+                    <a href="./view-all.html">View all</a>
+                </div>
+                <div class="recent-jobs-list">
+                    <div id="job-skeleton" class="job-skeleton">
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <div class="preload-date"></div>
+                                <div class="preload-btn"></div>
+                              </div>
+                              <div class="preload-description"></div>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <div class="preload-date"></div>
+                                <div class="preload-btn"></div>
+                              </div>
+                              <div class="preload-description"></div>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <div class="preload-date"></div>
+                                <div class="preload-btn"></div>
+                              </div>
+                              <div class="preload-description"></div>
+                        </div>
+                    </div>
+                    <div id="jobs-loaded" class="jobs-loaded">
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <p class="job-date">Jan 2, 2025 • 9:17:39 pm</p>
+                                <div class="status-indicator">
+                                    <button class="copy-button">
+                                      <img src="../images/copy-icon.svg" alt="copy"/>
+                                      Copy
+                                    </button>
+                                </div>
+                              </div>
+                              <p class="worker-description">The email highlights two main action items: finalizing the budget report by Friday and reviewing client feedback before the meeting. The priority level is high, as both tasks are time-sensitive.</p>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <p class="job-date">Jan 2, 2025 • 9:17:39 pm</p>
+                                <div class="status-indicator">
+                                    <button class="copy-button">
+                                      <img src="../images/copy-icon.svg" alt="copy"/>
+                                      Copy
+                                    </button>
+                                </div>
+                              </div>
+                              <p class="worker-description">The email highlights two main action items: finalizing the budget report by Friday and reviewing client feedback before the meeting. The priority level is high, as both tasks are time-sensitive.</p>
+                        </div>
+                        <div class="recent-item">
+                            <div class="job-meta">
+                                <p class="job-date">Jan 2, 2025 • 9:17:39 pm</p>
+                                <div class="status-indicator">
+                                    <button class="copy-button">
+                                      <img src="../images/copy-icon.svg" alt="copy"/>
+                                      Copy
+                                    </button>
+                                </div>
+                              </div>
+                              <p class="worker-description">The email highlights two main action items: finalizing the budget report by Friday and reviewing client feedback before the meeting. The priority level is high, as both tasks are time-sensitive.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tab-content" id="jobs-tab">
+        <div class="jobs-list">
+          <div class="job-category">
+              <div class="category-header">
+                  <h3 class="category-title">Analyzer</h3>
+                  <button class="status-arrow">
+                      <img src="../images/arrow.svg" alt="arrow"/>
+                  </button>
+                </div>
+                <div class="category-jobs">
+                  <div class="job-item">
+                      <div class="job-meta">
+                          <p class="job-date">Jan 2, 2025 • 5:17:01 am</p>
+                          <div class="status-indicator">
+                              <div class="status-processing">
+                                  <img src="../images/clock-icon.svg" alt="processing"/>
+                                  <p>Processing</p>
+                              </div>
+                              <button class="del-button">
+                                <img src="../images/delete-icon.svg" alt="delete"/>
+                              </button>
+                          </div>
+                        </div>
+                        <div class="job-content">
+                            <p>...</p>
+                        </div>
+                        <div class="job-url">https://www.exampleblog.com/blog-post-title</div>
+                  </div>
+                  <div class="job-item">
+                    <div class="job-meta">
+                        <p class="job-date">Jan 2, 2025 • 1:20:39 pm</p>
+                        <div class="status-indicator">
+                            <div class="status-complete">
+                                <img src="../images/check-icon.svg" alt="complete"/>
+                                <p>Completed</p>
+                            </div>
+                            <button class="copy-button">
+                                <img src="../images/copy-icon.svg" alt="copy"/>
+                                Copy
+                            </button>
+                        </div>
+                      </div>
+                      <div class="job-content">
+                          <p>The email highlights two main action items:</p> <button class="see-more">see more</button>
+                      </div>
+                      <div class="job-url">https://www.exampleblog.com/blog-post-title                    </div>
+                    </div>
+                </div>
+          </div>
+
+          <div class="job-category">
+            <div class="category-header">
+                <h3 class="category-title">Rewriter</h3>
+                <button class="status-arrow">
+                    <img src="../images/arrow.svg" alt="arrow"/>
+                </button>
+              </div>
+              <div class="category-jobs">
+                <div class="job-item">
+                    <div class="job-meta">
+                        <p class="job-date">Jan 2, 2025 • 5:17:01 am</p>
+                        <div class="status-indicator">
+                            <div class="status-failed">
+                                <img src="../images/failed-icon.svg" alt="failed"/>
+                                <p>Failed</p>
+                                <div class="bubble">
+                                    <p>Oops! Something went wrong. This worker isn’t responding as expected. Try again in a moment, or refresh Paste to reset. If the issue persists, contact support for help!</p>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="job-content">
+                          <p>This job failed to process the output</p>
+                      </div>
+                      <div class="job-url">https://www.exampleblog.com/blog-post-title</div>
+                </div>
+                <div class="job-item">
+                  <div class="job-meta">
+                      <p class="job-date">Jan 2, 2025 • 1:20:39 pm</p>
+                      <div class="status-indicator">
+                          <div class="status-complete">
+                              <img src="../images/check-icon.svg" alt="complete"/>
+                              <p>Completed</p>
+                          </div>
+                          <button class="copy-button">
+                              <img src="../images/copy-icon.svg" alt="copy"/>
+                              Copy
+                          </button>
+                      </div>
+                    </div>
+                    <div class="job-content">
+                        <p>The article discusses how AI is transforming</p> <button class="see-more">see more</button>
+                    </div>
+                    <div class="job-url">https://www.exampleblog.com/blog-post-title                    </div>
+                  </div>
+              </div>
+        </div>
+
+        <div class="job-category">
+            <div class="category-header">
+                <h3 class="category-title">Summarizer</h3>
+                <button class="status-arrow">
+                    <img src="../images/arrow.svg" alt="arrow"/>
+                </button>
+              </div>
+              <div class="category-jobs">
+                <div class="job-item">
+                    <div class="job-meta">
+                        <p class="job-date">Jan 2, 2025 • 5:17:01 am</p>
+                        <div class="status-indicator">
+                            <div class="status-failed">
+                                <img src="../images/failed-icon.svg" alt="failed"/>
+                                <p>Failed</p>
+                                <div class="bubble">
+                                    <p>Oops! Something went wrong. This worker isn’t responding as expected. Try again in a moment, or refresh Paste to reset. If the issue persists, contact support for help!</p>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="job-content">
+                          <p>This job failed to process the output</p>
+                      </div>
+                      <div class="job-url">https://www.exampleblog.com/blog-post-title</div>
+                </div>
+                <div class="job-item">
+                  <div class="job-meta">
+                      <p class="job-date">Jan 2, 2025 • 1:20:39 pm</p>
+                      <div class="status-indicator">
+                          <div class="status-complete">
+                              <img src="../images/check-icon.svg" alt="complete"/>
+                              <p>Completed</p>
+                          </div>
+                          <button class="copy-button">
+                              <img src="../images/copy-icon.svg" alt="copy"/>
+                              Copy
+                          </button>
+                      </div>
+                    </div>
+                    <div class="job-content">
+                        <p>The article discusses how AI is transforming</p> <button class="see-more">see more</button>
+                    </div>
+                    <div class="job-url">https://www.exampleblog.com/blog-post-title                    </div>
+                  </div>
+              </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal hidden" id="rewriter-overlay">
+    <div class="modal-container" id="rewriter-modal">
+      <button class="close-modal" id="close-rewriter"><img src="../images/delete-icon.svg" alt="close"/></button>
+      <div class="modal-content">
+         <div class="modal-rewriter-info">
+            <div class="modal-status"><img src="../images/check-icon.svg" alt="complete"/>Completed</div>
+            <span class="modal-date">Feb 7, 2025 • 1:30 PM PST</span>
+          </div>
+          <h2>Rewriter</h2>
+          <p class="modal-link">https://www.example.com/blog/post-title</p>
+          <div class="content-input dark-input">
+            <textarea readonly type="text" name="text-content" id="text-content">The article discusses how AI is transforming marketing by enhancing customer engagement. Key benefits include personalized recommendations, automated content creation, and predictive analytics. To stay competitive, businesses must integrate AI into their marketing strategies.</textarea>
+          </div>
+          <div class="modal-btn">
+            <button class="btn1-modal" id="del-job-btn">Delete</button>
+            <button class="btn2-modal" id="copy-job-btn">Copy</button>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal hidden" id="analyzer-overlay">
+    <div class="modal-container" id="analyzer-modal">
+      <div class="modal-content">
+        <h2>Edit</h2>
+        <div class="modal-inputs">
+          <input type="text" name="analyzer" value="Analyzer">
+          <div class="content-input">
+            <textarea type="text" name="analyzer-text" id="analyzer-text" maxlength="200">The message sets a deadline to submit the report by Friday and asks the team to review client feedback before the meeting. Both tasks are high priority and should be completed promptly.</textarea>
+            <span class="char-count" id="char-count">
+                153/142
+            </span>
+          </div>
+        </div>
+        <div class="modal-btn">
+          <button class="btn1-modal" id="cancel-analyzer">Cancel</button>
+          <button class="btn2-modal" id="update-analyzer">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="del-worker-overlay">
+    <div class="modal-container" id="del-worker-modal">
+      <div class="modal-content">
+        <h2>Delete</h2>
+        <p>Are you sure you want to delete this worker?</p>
+        <div class="modal-btn">
+          <button class="btn1-modal" id="cancel-del-worker">No</button>
+          <button class="btn2-modal">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="del-job-overlay">
+    <div class="modal-container" id="del-job-modal">
+      <div class="modal-content">
+        <h2>Delete</h2>
+        <p>Are you sure you want to delete this job?</p>
+        <div class="modal-btn">
+          <button class="btn1-modal" id="cancel-del-job">No</button>
+          <button class="btn2-modal">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+

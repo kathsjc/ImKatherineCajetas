@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Land</title>
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link href="../css/output.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav id="global-header">
+            <div class="menu-container">
+                <a class="img-logo" href="../">
+                    <img id="logo" src="../images/logo.svg" alt="BuildReady logo"/>
+                </a>
+                <div class="nav-menu">
+                    <button class="open-menu" id="open-menu" aria-label="Toggle navigation menu">
+                        <img id="menuIcon" src="../images/menu-icon.svg" alt="menu" class="menu-icon"/>
+                        <img class="close-menu" id="close-menu" src="../images/close-icon.svg" alt="close menu"/>
+                    </button>
+                </div>
+            </div>
+            <ul id="list">
+                <li>
+                    <a href="../">Home</a>                  
+                </li>
+                <li>
+                    <a href="../about/">About</a>
+                </li>
+                <li>
+                    <a href="../articles/">Articles</a>
+                </li>
+                <li>
+                    <a href="../faq/">FAQ</a>
+                </li>
+                <li>
+                    <a href="../projects/browse/">Projects</a>
+                </li>
+                <li>
+                    <a href="../properties/browse/">Properties</a>
+                </li>
+            </ul>     
+        </nav>
+    </header>
+    <div class="sell-headings">
+        <h1>
+            Sell Your Land
+        </h1>
+        <p>
+            Get a Cash Offer in 48 Hours
+        </p>
+    </div>
+    <section class="section-land">
+        <h2>
+            We Buy Land in Oregon and Washington state.
+        </h2>
+        <div class="container-reasons">
+            <div class="container-item">
+                <div class="check-img"><img src="../images/check.svg" alt="check"/></div>
+                <p>Fair cash offers</p>
+            </div>
+            <div class="container-item">
+                <div class="check-img"><img src="../images/check.svg" alt="check"/></div>
+                <p>No fees or commissions</p>
+            </div>
+            <div class="container-item">
+                <div class="check-img"><img src="../images/check.svg" alt="check"/></div>
+                <p>Quick, hassle-free closing</p>
+            </div>
+            <div class="container-item">
+                <div class="check-img"><img src="../images/check.svg" alt="check"/></div>
+                <p>You pick the closing date</p>
+            </div>
+        </div>
+    </section>
+    <section class="section-land">
+        <h2>
+            Sell Your Land in 3 Simple Steps
+        </h2>
+        <div class="container-reasons">
+            <div class="container-item">
+                <span class="item-nos">1</span>
+                <div class="item-info">
+                    <p class="step-title">Tell Us About Your Property</p>
+                    <p>Fill out the brief form below. It takes less than 2 minutes.</p>
+                </div>
+            </div>
+            <div class="container-item">
+                <span class="item-nos">2</span>
+                <div class="item-info">
+                    <p class="step-title">Get Your Cash Offer </p>
+                    <p>Within 48 hours, we'll provide a fair, no-obligation offer for your land.</p>
+                </div>
+            </div>
+            <div class="container-item">
+                <span class="item-nos">3</span>
+                <div class="item-info">
+                    <p class="step-title">Close When You're Ready</p>
+                    <p>Choose your closing date and get paid. We handle all the paperwork.</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <section class="section-land">
+        <h2>
+            Get Your Cash Offer Now
+        </h2>
+        <form id="form" novalidate>
+            <div class="form-group">
+                <label for="address">Property Address <span>(Street, City, State, Zip Code)</span> *</label>
+                <input type="text" name="address" id="address" placeholder="Enter Street" required autocomplete="street-address"/>
+                <span class="error-form">Enter a street</span>
+                <div class="container-select">
+                    <button type="button" id="dropdownBtn" class="select-input">
+                      <span id="drop-text">Select State</span>
+                      <img src="../images/arrow-icon.svg" alt="arrow" class="select-arrow"/>
+                    </button>
+                    <div id="dropdownMenu" class="select-options">
+                      <button type="button" class="dropdown-option" data-value="OR">OR</button>
+                      <button type="button" class="dropdown-option" data-value="WA">WA</button>
+                    </div>
+                    <input type="hidden" id="selectedState" name="state" required/>
+                    <span class="error-form">Enter a state</span>
+                </div>
+                <input type="text" name="zip" id="zip" placeholder="Enter Zip Code" required autocomplete="postal-code"/>
+                <span class="error-form">Enter a zip code</span>
+            </div>
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" name="name" id="name" placeholder="Enter Name" required autocomplete="name"/>
+                <span class="error-form">Enter a name</span>
+            </div>        
+            <div class="form-group">
+                <label for="phone">Phone *</label>
+                <input type="tel" name="phone" id="phone" placeholder="Enter Phone" required autocomplete="tel"/>
+                <span class="error-form">Enter a valid phone</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" name="email" id="email" placeholder="Enter Email" required autocomplete="email"/>
+                <span class="error-form">Enter a valid email</span>
+            </div>
+            <div class="container-time">
+                <span>Best Time to Contact *</span>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="contact-time" class="custom-radio" value="Morning" required checked>
+                        Morning
+                    </label>
+                    <label>
+                        <input type="radio" name="contact-time" class="custom-radio" value="Midday" required>
+                        Midday
+                    </label>
+                    <label>
+                        <input type="radio" name="contact-time" class="custom-radio" value="Afternoon" required>
+                        Afternoon
+                    </label>
+                    <label>
+                        <input type="radio" name="contact-time" class="custom-radio" value="Evening" required>
+                        Evening
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="comments">Any Additional Details</label>
+                <textarea id="comments" name="comment" placeholder="Enter Any Additional Details"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+            <p>(*) Required fields</p>
+        </form> 
+    </section>
+    <section class="section-land">
+        <h2>
+            Types of Land We Buy
+        </h2>
+        <div class="container-reasons">
+            <div class="container-item">
+                <div class="check-img"><img src="../images/check.svg" alt="check"/></div>
+                <p>Agricultural land</p>
+            </div>
+            <div class="container-item">
+                <div class="check-img"><img src="../images/check.svg" alt="check"/></div>
+                <p>Commercial lots</p>
+            </div>
+            <div class="container-item">
+                <div class="check-img"><img src="../images/check.svg" alt="check"/></div>
+                <p>Problem properties</p>
+            </div>
+            <div class="container-item">
+                <div class="check-img"><img src="../images/check.svg" alt="check"/></div>
+                <p>Raw undeveloped land</p>
+            </div>
+            <div class="container-item">
+                <div class="check-img"><img src="../images/check.svg" alt="check"/></div>
+                <p>Vacant residential lots</p>
+            </div>
+        </div>
+    </section>
+    <section class="section-land">
+        <h2 class="extra-size">
+            Why Choose Us?
+        </h2>
+        <div class="container-why">
+            <div class="item-why">
+                <img src="../images/pin-icon.svg" alt="pin"/>
+                <h3>Local Experts</h3>
+                <p>
+                    We know PNW real estate and make strong cash offers based on current market values. 
+                </p>
+            </div>
+            <div class="item-why">
+                <img src="../images/dollar-icon.svg" alt="pin"/>
+                <h3>No Cost to You</h3>
+                <p>
+                    We cover all closing costs and fees. The offer we make is the amount you receive.
+                </p>
+            </div>
+            <div class="item-why">
+                <img src="../images/check-circle.svg" alt="pin"/>
+                <h3>Guaranteed Close</h3>
+                <p>
+                    No financing contingencies. No last-minute surprises. When we make an offer, we follow through.
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="content-detail" id="about">
+        <h2 class="extra-size">
+            Frequently Asked Questions
+        </h2>
+        <div class="content-detail-text">
+            <details class="accordion-item">
+                <summary class="accordion-header">
+                  <span>How fast can you close? </span>
+                  <div class="arrow-icon">
+                    <img src="../images/arrow-icon.svg" alt="open/close"/>
+                  </div>
+                </summary>
+                <div class="accordion-content">
+                    <p>
+                        As quickly as 7 days, or on your timeline. You choose the closing date that works for you.
+                    </p>                        
+                </div>
+              </details>
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  <span>Do I need to clean up the property?</span>
+                  <div class="arrow-icon">
+                    <img src="../images/arrow-icon.svg" alt="open/close"/>
+                  </div>
+                </summary>
+                <div class="accordion-content">
+                    <p>
+                        No - we buy land completely as-is. No cleanup or prep work needed.
+                    </p>                        
+                </div>
+              </details>
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  <span>Are there any fees or commissions?</span>
+                  <div class="arrow-icon">
+                    <img src="../images/arrow-icon.svg" alt="open/close"/>
+                  </div>
+                </summary>
+                <div class="accordion-content">
+                    <p>
+                        None. We cover all costs including closing fees.
+                    </p>                        
+                </div>
+              </details>
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  <span>What types of land do you buy?</span>
+                  <div class="arrow-icon">
+                    <img src="../images/arrow-icon.svg" alt="open/close"/>
+                  </div>
+                </summary>
+                <div class ="accordion-content">
+                    <p>
+                        We purchase most types of vacant land within [City/Region]. Even if your property has challenges like access issues or zoning restrictions, we'd like to make you an offer.
+                    </p>                        
+                </div>
+              </details>
+        </div>
+     </div>    
+     <footer>
+        <div class="footer-nav">
+          <a class="btn-buyland" href="./">Sell Your Land</a>
+          <div class="footer-links">
+            <a href="../">Home</a>  
+            <a href="../about/">About</a>  
+            <a href="../articles/">Articles</a>
+            <a href="../faq/">FAQ</a>
+            <a href="../projects/browse/">Projects</a>
+            <a href="../properties/browse/">Properties</a>
+          </div>
+        </div>
+        <div class="footer-info">
+          <div class="footer-links">
+            <a href="../about/privacy/">Privacy Policy</a>
+            <a href="../about/terms-of-service/">Terms of Service</a>
+          </div>
+          <p>&copy; 2025 BuildReady, LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../js/header.js"></script>
+    <script src="../js/faq.js"></script>
+    <script src="../js/buyland.js"></script>
+</body>
+</html>

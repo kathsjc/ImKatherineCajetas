@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F3F3F3;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #929292;
+    border-radius: 4px;
+}
+
+@theme{
+    --font-display: "Inter", "sans-serif";
+}
+
+body{
+    @apply font-display text-[#333] bg-[#F3F3F3] w-[400px] text-[12px] min-h-[650px];
+}
+
+header {
+    @apply bg-[#FFF] px-[32px] py-[16px] border-b border-[#FFF] flex justify-between items-center;
+}
+
+header h1 {
+    @apply text-[24px] font-[700] cursor-default;
+}
+
+.icon-button {
+    @apply bg-[#F6F6F6] cursor-pointer rounded-full p-[8px] border-[.5px] border-transparent;
+}
+
+.icon-button:hover {
+    @apply bg-transparent border-black/30;
+}
+
+.icon-button img{
+    @apply h-[24px];
+}
+
+.settings-content .icon-button img{
+    @apply h-[16px];
+}
+
+.settings-content .icon-button{
+    @apply p-0;
+}
+
+.settings-content .icon-button:hover{
+    @apply border-none;
+}
+  
+.navigation-tabs {
+    @apply relative flex px-[32px] py-[16px] border-b border-black/5 gap-[16px];
+}
+
+.tab {
+    @apply flex flex-[1] justify-center items-center py-[4px] px-[16px] text-center gap-[8px] text-black border-none bg-white cursor-pointer rounded-[27px] font-[600] leading-[22px] transition-colors duration-200;
+}
+
+.back-btn{
+    @apply flex-none;
+}
+  
+.tab img{
+    @apply h-[14px];
+}
+
+.tab.active {
+    @apply bg-[#333] text-[#FFF];
+}
+
+.tab.active img, .jobs-list .copy-button img, .results-container .copy-button img{
+    @apply filter invert brightness-200;
+}
+
+.worker-list .tab.active img, .copy-button img{
+    @apply filter-none;
+}
+
+.content-container {
+    @apply px-[32px] pt-[16px];
+}
+
+.tab-content {
+    @apply hidden;
+}
+  
+.tab-content.active {
+    @apply block;
+}
+
+/* worker list styles*/
+
+.worker-card {
+    @apply bg-white rounded-[8px] p-[24px] mb-[16px] relative;
+}
+
+.view-section .worker-card{
+    @apply py-[16px];
+}
+  
+.content-header{
+    @apply flex justify-between;
+}
+  
+.paste-button {
+    @apply flex items-center gap-[8px] bg-[#333] text-white border-none rounded-[4px] py-[4px] px-[16px] text-[10px] font-[600] cursor-pointer;
+}
+
+.paste-button img{
+    @apply h-[10px];
+}
+
+.status-indicator{
+    @apply flex h-[20px] gap-[8px] text-[10px] items-center;
+}
+
+.status-indicator div, .category-header .status-arrow, .status-indicator button{
+    @apply py-[4px] px-[7px] flex items-center cursor-pointer gap-[5px] text-[10px] font-[600];
+}
+
+.status-complete{
+    @apply rounded-[4px] border-[.5px] border-[#3eaf3f] h-full text-black;
+}
+
+.status-complete p, .status-processing p, .status-failed p{
+    @apply hidden;
+}
+
+.status-complete:hover p, .status-processing:hover p, .status-failed:hover p{
+    @apply block;
+}
+  
+.status-processing {
+    @apply rounded-[4px] border-[.5px] border-[#ffc130] h-full text-black;
+}
+  
+.status-failed{
+    @apply rounded-[4px] border-[.5px] border-[#b10e1c] h-full text-black;
+}
+
+.status-failed img{
+    @apply h-[10px];
+}
+
+.status-failed:hover .bubble{
+    @apply visible;
+}
+
+.bubble{
+    @apply invisible absolute right-0 bottom-0 bg-[#EEEEEE] max-w-[240px] rounded-[8px] mr-[4px] mb-[5px] z-[100];
+}
+
+.worker-card .bubble{
+    @apply top-0 bottom-auto mt-[48px];
+}
+
+.category-jobs .bubble{
+    @apply max-w-[270px];
+}
+
+.results-container .bubble{
+    @apply mb-[20px];
+}
+
+.bubble p{
+    @apply text-[10px] leading-[16px] font-[500] my-[8px] mx-[16px];
+}
+
+.worker-content{
+    @apply mt-[24px];
+}
+
+.view-section .worker-content{
+    @apply mt-[0];
+}
+  
+.worker-title {
+    @apply text-[14px] font-[600];
+}
+
+.edit-button, .delete-button{
+    @apply flex items-center gap-[8px] border-[.5px] border-black text-[#666] rounded-[4px] py-[4px] px-[16px] font-[600] cursor-pointer opacity-[25%];
+}
+
+.edit-button:hover, .delete-button:hover{
+    @apply opacity-100 text-black border-black/30;
+}
+
+.edit-button img, .delete-button img{
+    @apply h-[10px];
+}
+  
+.worker-description {
+    @apply leading-[20px] text-black/50 truncate py-[8px] border-b-[.5px] border-black/20;
+}
+
+.view-section .worker-description{
+    @apply pb-0 border-none;
+}
+
+.recent-jobs-list .job-date{
+    @apply text-[12px];
+}
+
+/* Job list styles */
+.category-jobs{
+    @apply h-[0] overflow-hidden;
+}
+
+.category-header{
+    @apply flex justify-between items-center mb-[8px];
+}
+  
+.category-title {
+    @apply text-[12px] font-semibold text-black/40;
+}
+  
+.category-header .status-arrow{
+    @apply h-[20px];
+}
+  
+.job-item {
+    @apply relative bg-white rounded-lg mb-[16px] px-[24px] py-[12px] flex flex-col;
+}
+
+.results-container .job-item{
+    @apply py-[16px];
+}
+  
+.job-meta {
+    @apply flex justify-between items-center text-black/20;
+}
+
+.preload-date, .preload-btn, .preload-description{
+    @apply bg-[#D9D9D9]/30 h-[15px];
+}
+
+.preload-date{
+    @apply w-[135px];
+}
+
+.preload-btn{
+    @apply w-[77px];
+}
+
+.preload-description{
+    @apply mt-[8px];
+}
+
+.job-date{
+    @apply text-[10px] tracking-[-.03em];
+}
+
+.worker-card .copy-button, .jobs-list .copy-button, .result-btns .copy-button{
+    @apply flex items-center gap-2 border-[.5px] border-black bg-black text-white rounded px-[16px] py-[4px] text-[10px] leading-0 font-[600] cursor-pointer;
+}
+
+.worker-list .status-indicator .copy-button{
+    @apply border-[.5px] border-black/20 bg-white text-black;
+}
+
+.result-btns{
+    @apply flex justify-between mt-[16px];
+}
+
+.del-button{
+    @apply border-[.5px] border-black/10 bg-white rounded-[4px];
+}
+  
+.job-content {
+    @apply flex items-center gap-[2px] max-w-[300px] leading-[20px] mt-[16px];
+}
+  
+.job-content p{
+    @apply truncate flex-1 m-0;
+}
+  
+.see-more {
+    @apply flex-shrink-0 underline font-[600] text-black cursor-pointer;
+}
+
+.results-container .see-more{
+    @apply font-[400];
+}
+  
+.job-url {
+    @apply text-black/20 truncate;
+}
+  
+.job-actions {
+    @apply flex justify-end gap-[8px];
+
+}
+  
+  /* Recent jobs section */
+.recent-jobs {
+    @apply h-[0] overflow-hidden transition-[height] duration-200 ease-in-out;
+}
+  
+.recent-jobs h3 {
+    @apply text-[12px] font-[600] text-black/40;
+}
+
+.recent-jobs .content-header a{
+    @apply underline text-[12px] font-[600] text-black/80 cursor-pointer;
+}
+
+.recent-jobs .content-header{
+    @apply mb-[8px];
+}
+
+.recent-jobs-list{
+    @apply flex flex-col gap-[8px];
+}
+
+.recent-item{
+    @apply border-[.5px] border-black/10 rounded-[4px] p-[16px] bg-black/2;
+}
+
+.recent-jobs-list .worker-description{
+    @apply pb-0 border-none;
+}
+
+/* settings */
+.settings-container{
+    @apply flex flex-col h-screen mb-[16px];
+}
+
+.settings-content {
+    @apply py-[16px] px-[32px];
+}
+
+.settings-section {
+    @apply mb-[16px];
+}
+
+.settings-section p {
+    @apply block text-black/30 text-[14px] font-[600] mb-[8px] ml-[21px];
+}
+
+.container-select {
+    @apply relative inline-block w-full;
+}
+  
+.select-arrow {
+    @apply rotate-180 opacity-50;
+}
+  
+.select-options {
+    @apply absolute z-[50] w-full rounded-b-lg overflow-hidden shadow-md transition-transform duration-200 ease-in-out hidden;
+}
+
+.select-options button {
+    @apply w-full border-none text-left px-[24px] py-[12px] bg-white border-b-[.5px] border-black/10 text-[14px] font-[600];
+}
+  
+.select-options button:hover {
+    @apply bg-black text-white;
+}
+  
+.api-key-input {
+    @apply flex items-center relative;
+}
+  
+.api-key-input input {
+    @apply pr-[40px];
+}
+  
+.api-key-input button {
+    @apply absolute right-[24px];
+}
+  
+.update-button {
+    @apply w-full border border-black/30 rounded-lg p-[16px] text-[16px] font-[600] bg-transparent cursor-pointer mt-[24px] hover:bg-[#444] hover:text-white;
+}
+  
+.footer-links {
+    @apply mx-[32px] mb-[80px] flex flex-col gap-[16px] mt-auto;
+}
+  
+.footer-links a {
+    @apply text-black/30 no-underline text-[14px] font-[600] py-[8px] w-auto self-start border-b border-transparent;
+}
+  
+.footer-links a:hover {
+    @apply text-black border-b border-black;
+}
+
+/* edit modal*/
+
+.modal-container{
+    @apply absolute bg-white rounded-[4px] p-[40px] shadow-lg w-[336px] z-50 flex flex-col;
+}
+
+.modal-content h2{
+    @apply font-[600] text-[28px];
+}
+
+.modal-inputs{
+    @apply flex flex-col mt-[16px] gap-[24px];
+}
+
+.modal-inputs input, .content-input{
+    @apply w-full outline-none border border-black/10 rounded-[8px] p-[16px] text-[16px] font-[500];
+}
+
+.content-input{
+    @apply flex flex-col min-h-[240px] pr-[4px] gap-[8px];
+}
+
+.content-input textarea{
+    @apply flex-grow-1 font-[400] leading-[24px] outline-none resize-none;
+}
+
+.content-input span{
+    @apply ml-auto pr-[16px] text-[10px] font-[400];
+}
+
+.char-count{
+    @apply text-right text-gray-400 text-sm;
+}
+
+.modal-btn{
+    @apply flex gap-[16px] mt-[24px];
+}
+
+.modal-btn button{
+    @apply w-full rounded-[8px] p-[16px] text-[16px] font-[600] cursor-pointer;
+}
+
+.btn1-modal{
+    @apply border-[.5px] border-black/30;
+}
+
+.btn2-modal{
+    @apply bg-[#444] text-white;
+}
+
+.close-modal{
+    @apply bg-[#F6F6F6] rounded-full p-[8px] ml-auto;
+}
+
+.close-modal img{
+    @apply h-[24px] cursor-pointer;
+}
+
+.modal-rewriter-info{
+    @apply mt-[24px] mb-[4px] flex justify-between items-center;
+}
+
+.modal-status{
+    @apply bg-[#3EAF3F] flex items-center gap-[4px] rounded-[4px] text-white py-[4px] px-[7px] text-[10px] font-[600];
+}
+
+.modal-status img{
+    @apply filter invert brightness-200 h-[10px];
+}
+
+.modal-date{
+    @apply text-black/20 text-[10px];
+}
+
+.modal-content .modal-link{
+    @apply mt-[24px] mb-[4px] truncate text-[12px] leading-[20px] text-black/20;
+}
+
+.dark-input{
+    @apply bg-[#444]/10 border-none;
+}
+
+.dark-input textarea{
+    @apply font-[300];
+}
+
+.dark-input textarea::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+.dark-input textarea::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 4px;
+}
+  
+.dark-input textarea::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.toast .icon{
+    @apply h-[16px] mr-[8px];
+}
+
+.toast p{
+    @apply text-[12px] leading-[20px];
+}
+
+.toast span{
+    @apply font-[600];
+}
+
+.toast button{
+    @apply ml-auto cursor-pointer;
+}
+
+.modal-content p{
+    @apply mt-[16px] text-[16px] leading-[20px];
+}
+
+/*view all*/
+.results-container{
+    @apply px-[32px];
+}
+
+.results-container .category-jobs{
+    @apply h-auto overflow-hidden;
+}
+
+.results-container h3{
+    @apply text-[14px] font-[600] mb-[24px];
+}
+
+.terms-container{
+    @apply my-[40px] mx-[56px] text-black;
+}
+
+.terms-container h2{
+    @apply text-center text-[20px] font-[600];
+}
+
+.terms-container p{
+    @apply mt-[24px] text-[14px] leading-[24px] font-[300];
+}
+
+.terms-container span{
+    @apply font-[700];
+}
+
+@layer components{
+    .modal{
+        @apply fixed inset-0 bg-black/90 flex items-center justify-center z-50;
+    }
+
+    .toast{
+        @apply fixed absolute w-[100] w-[calc(100%-64px)] z-[70] bg-white flex py-[8px] px-[16px] items-center rounded-[4px] max-w-[336px];
+    }
+
+    .status-arrow{
+        @apply border-[.5px] border-black/10 rounded-[4px] h-full rotate-180;
+    }
+
+    .job-skeleton{
+        @apply flex flex-col gap-[8px] transition-opacity duration-300 opacity-100;
+    }
+    
+    .jobs-loaded{
+        @apply flex flex-col gap-[8px] transition-opacity duration-300;
+    }
+
+    .select-input, .api-key-input input {
+        @apply flex justify-between px-[24px] py-[12px] w-full border-none bg-white rounded-lg outline-none text-[14px] font-[600];
+    }
+}

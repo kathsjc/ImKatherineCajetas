@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="../images/favicon.png"/>
+    <title>Organizing Change</title>
+    <link href="../css/output.css" rel="stylesheet">
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+</head>
+<body>
+  <header id="header">
+    <div class="menu-container">
+      <a href="../">
+        <img src="../images/logo-truevoice.svg" alt="truevoice logo"/>
+      </a>
+
+      <div class="search-box">
+        <input type="text" id="search-input" name="search-input" placeholder="Search"/>
+        <button class="search-icon" id="search-btn">
+            <img src="../images/search-icon.svg" alt="search" id="searchBar-icon"/>
+        </button>
+      </div>
+
+      <div class="nav-menu">
+        <button class="open-menu" id="open-menu" aria-label="Toggle navigation menu">
+            <img id="menuIcon" src="../images/menu-icon.svg" alt="menu" class="menu-icon"/>
+            <img class="close-menu" id="close-menu" src="../images/close-icon.svg" alt="close menu"/>
+        </button>
+      </div>
+    </div>
+
+    <ul id="list">
+      <li><a href="../">About</a></li>
+      <li><a href="../">Browse</a></li>
+      <li><a href="./" class="current-nav">Featured</a></li>
+    </ul>
+
+    <div id="nav-info">
+      <p>TrueVoice is the modern campfire. A place for stories to inspire your own personal journey.</p>
+      <span>© 2025 TrueVoice. Your story matters.</span>
+    </div>
+  </header>
+
+  <div class="content-detail">
+    <div class="heading story-heading">
+      <h4>Season 01 / Episode 01</h4>
+      <h2>
+        Organizing Change
+      </h2>
+    </div>
+
+    <div class="feature-img">
+        <img src="../images/feature-img.jpg" alt="Denise Perry"/>
+    </div>
+
+    <div class="container-player">
+        <div class="audio-player">
+            <div class="audio-details">
+                <div class="waveform-container">
+                    <div id="waveform" class="waveform"></div>
+                    <div class="audio-time">
+                        <span id="current-time">0:00</span>
+                        <span id="remaining-time">0:00</span>
+                    </div>
+                </div>
+                <span id="total-duration" class="audio-duration">0:00</span>
+            </div>
+            <div class="audio-controls">
+                <button id="rewind">
+                    <img src="../images/backward-button.svg" class="audio-btn"/>
+                </button>
+                <button id="playPause" class="btn-playPause">
+                    <svg id="play-btn" class="play-btn" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="79" height="79" rx="39.5" stroke="currentColor" stroke-opacity="0.2"/>
+                      <path d="M32.1562 25.2305L55.1306 39.9997L32.1562 54.7689V25.2305Z" fill="currentColor" stroke="currentColor" stroke-width="3.28205" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg id="pause-btn" class="pause-btn" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="79" height="79" rx="39.5" stroke="currentColor" stroke-opacity="0.2"/>
+                      <path d="M36.7176 26.873H30.1543V53.1264H36.7176V26.873Z" fill="currentColor" stroke="currentColor" stroke-width="1.64083" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M49.8436 26.873H43.2803V53.1264H49.8436V26.873Z" fill="currentColor" stroke="currentColor" stroke-width="1.64083" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button id="forward">
+                    <img src="../images/forward-button.svg" class="audio-btn"/>
+                </button>
+            </div>
+        </div>
+        <div class="audio-info">
+            <h3>
+                Organizing Change
+            </h3>
+            <p>
+                Denise Perry has been preparing and training leaders to dismantle racial injustice for almost a decade. While barely ten years old, Denise began her journey as an ‘organizer’ helping working-class Americans navigate deteriorating working conditions and attempts to dismantle labor unions that have been surging since the Reagan era.
+            </p>
+            <span>60 MINS</span>
+        </div>
+    </div>
+    
+    <div class="content-text alt-color">
+        <h3>The Conversation</h3>
+        <p>Denise Perry has been preparing and training leaders to dismantle racial injustice for almost a decade. While barely ten years old, Denise began her journey as an ‘organizer’ helping working-class Americans navigate deteriorating working conditions and the dilution of labor unions because of the Reagan administration’s neoliberalism in the 80s.</p>
+        <p>Denise Perry has been preparing and training leaders to dismantle racial injustice for almost a decade. While barely ten years old, Denise began her journey as an ‘organizer’ helping working-class Americans navigate deteriorating working conditions and attempts to dismantle labor unions that have been surging since the Reagan era.</p>
+        
+        <h3>What Denise talks about</h3>
+        <ul>
+            <li>Developing a passion for organizing workers</li>
+            <li>What does a labor union mean to a community, and how does it work?</li>
+            <li>The formation of the United Food Food and Commercial Workers Union</li>
+            <li>Police unions immunizing officers from the repercussions of deadly conduct</li>
+            <li>Neoliberalism and how it changed labor in America</li>
+            <li>School indoctrination towards individualism - Why many have negative connotations about unions</li>
+        </ul>
+        
+        <h3>More about Denise</h3>
+        <div class="img-block"></div>
+        <p>Denise’s first paid orientation in the labor union arena was in 1984 when she was 23. But for the ten years prior, she had attended every kind of union, march, protest, etc... she even recalls being involved with events supporting the end of Apartheid in South Africa. After working at the United Food and Commercial Workers Union, she later worked with the Women’s Global Equity Project, which took her throughout Africa and the Caribbean to train and work with women labor activists.</p>
+        <p>A few years later, she found herself in Miami, Florida, co-founding an organization called <a href="https://poweru.org/" target="_blank">Power U Center for Social Change</a> in 2001. The organization was rooted in Miami’s historically black community of Overtown. Power U continues to equip residents with soft-skills to challenge the displacement of low-income families by gentrification, blocking the proposed use of public land for luxury condominiums in the neighborhood. She later founded BOLD, an organization she is still involved with as the Executive Director. Giving young leaders of racial justice initiatives the tools and skills to bring about change.</p>
+        
+        <h3>Developing a passion for protecting workers</h3>
+        <p>At a young age, Denise was already helping her father organize working-class people. She would give handouts and call people to remind them about labor union functions and activities. Her family has always been deeply involved with supporting workers and collectively conscious of the things they supported (or not). They even had a list of things to boycott on their fridge.</p>
+        <p>In her teens, she once went to clean a house with a friend for money. The owner was not satisfied with their, which infuriated Denise. This experience instilled in her respect and appreciation for people’s labor as she felt the owner had no right to complain about work she did not do.</p>
+        
+        <h3>What does a labor union mean to a community and how does it work?</h3>
+        <div class="img-block"></div>
+        <p>Labor unions exist to give workers a voice that can influence the conditions they work under, how they are treated, their compensation, and collective power in their industry - when organized well.</p>
+        <p>Employees at any job have the right to organize amongst themselves should they feel they are not receiving a proper wage, conditions, or benefits. Or should they think they are excluded in the decision-making thereof. To form a labor union, workers typically sign and submit a petition or vote (requiring 50% + 1 to vote in favor) at the company to form a union that represents the employer’s workforce.</p>
+        <p>Once they are officially recognized and established as a union, they have the opportunity to negotiate a contract with their employers that secures their desired wages, benefits, and conditions.</p>
+        <p>All labor unions are governed and approved by the National Labour Relations Board. This is the federal body that makes a labor union contract between a workforce and an employer a binding agreement.</p>
+        <p>People and organizations break the rules of the contract which is why the National Labor Relations Board provides hearings, arbitrators, and mediators to make decisions that ensure fairness for both workers and corporations.</p>
+        <p>Interestingly, domestic and farmer workers are legally excluded from the right to organize themselves into unions. And this may be because, early on, the majority of these workers were African American. At least during the time, this was instituted. Because of the inability to organize into unions, these workers are prone to facing a lot of abuse. Especially domestic workers, who are often only one person employed by a household. And thus are prone to have little power over the terms and conditions of their labor.</p>
+        
+        <h3>The formation of the United Food and Commercial Workers Union</h3>
+        <p>Denise Perry worked for the United Food and Commercial Workers Union (UFCW) which was an amalgamation of several labor unions. In the 1980s, unions were struggling to survive the Reagan administration’s efforts to weaken them which is why the United Food and Commercial Workers Union was formed. Many unions merged at the time to gain and retain power.</p>
+        <p>Denise worked to organize health care workers for the UFCW.</p>
+        
+        <h3>Police Unions immunizing officers from repercussions of deadly conduct</h3>
+        <p>The police union is a significant part of why police violence or brutality has existed with little repercussions for police who misuse their power. The police are an arm of the state and not employees. They are similar to buildings and infrastructure belonging to a state rather than being standard employees.        </p>
+        <p>The way police labor unions function defends officers that abuse their power and brutalize citizens. When police are investigated for misconduct in police brutality cases, unions step in and assert they are conducting all necessary investigations. This serves as a wall for protection for police behavior as investigations into brutality cases are not undertaken by an entity that has no conflict of interest due to unions benefiting from a ruling in favor of any police in question.</p>
+        
+        <h3>Neoliberalism and how it changed labor in America</h3>
+        <p>Ronald Reagan became president in 1981, bringing with him neoliberal economic policies that significantly changed the working class’s lives. Both US and British governments in the 80s worked to make all resources easy to access for companies and industries, so they can thrive due to economic stagnation experienced by both countries in the 70s. President Reagan implemented unfavorable wages, work conditions, and union options for the working class. They were making it easy and cheap for corporations to acquire and dispose of labor. This is why Denise Perry’s work of organizing workers was crucial during her time at the United Food and Commercial Workers Labor Union.</p>
+        
+        <h3>School indoctrination towards individualism - Why many don’t support unions</h3>
+        <p>When schools talk about labor unions, they usually highlight strikes and other negative connotations. This is disjointed from the purpose of labor unions and how they benefit workers in an economy where corporations continue to be incentivized to maximize profit and reduce costs.</p>
+        
+        <h3>Articles & Videos</h3>
+        <div class="img-block"></div>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=pzVf9ce80Nc" target="_blank">10-Minute Neoliberalism Primer</a></li>
+            <li><a href="https://www.theguardian.com/books/2016/apr/15/neoliberalism-ideology-problem-george-monbiot" target="_blank">The Guardian: Neoliberalism — The ideology at the root of all our problems.</a></li>
+            <li><a href="https://www.newyorker.com/news/news-desk/how-police-union-power-helped-increase-abuses" target="_blank">The New Yorker: How Police Unions Enable & Conceal Power Abuses</a></li>
+        </ul>
+        
+        <h3>Articles & Videos</h3>
+        <ul>
+            <li><a href="https://www.boldorganizing.org/staff/" target="_blank">More About Denise</a></li>
+            <li><a href="https://www.boldorganizing.org/what-we-do/" target="_blank">Black Organizing for Leadership and Dignityr</a></li>
+            <li><a href="https://poweru.org/" target="_blank">Power U Center for Social Change</a></li>
+        </ul>
+    
+    </div>
+  </div>
+  
+  <footer>
+    <p>
+      TrueVoice is the modern campfire. A place for stories to inspire your own personal journey.
+    </p>
+    <div class="footer-info">
+      <span>© 2025 TrueVoice. Your story matters.</span>
+      <div class="footer-nav">
+        <a href="../about/">About</a>
+        <a href="../browse/">Browse</a>
+        <a href="./" class="current-page">Featured</a>
+      </div>
+    </div>
+  </footer>
+<script src="../js/header.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/player.js"></script>
+</body>
+</html>

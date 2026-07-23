@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paste</title>
+  <link rel="stylesheet" href="../css/output.css">
+</head>
+<body>
+  <div class="settings-container">
+    <header>
+        <h1>paste</h1>
+        <button id="settings-btn" class="icon-button">
+            <img src="../images/settings-icon.svg" alt="settings"/>
+        </button>
+      </header>
+    
+      <div class="settings-content">
+        <div class="toast" id="update-toast">
+          <img src="../images/info-icon.svg" class="icon" alt="info"/>
+          <p>Worker successfully updated.</p>
+          <button><img src="../images/delete-icon.svg" alt="close"/></button>
+        </div>
+        <div class="settings-section">
+          <p>Preferred LLM</p>
+          <div class="container-select">
+            <button type="button" id="dropdownBtnLLM" class="select-input">
+              <span id="selectedTextLLM">OpenAI</span>
+              <img src="../images/arrow.svg" alt="arrow" class="select-arrow" />
+            </button>
+            <div id="dropdownMenuLLM" class="select-options">
+              <button type="button" class="dropdown-option" data-value="Claude">Claude</button>
+              <button type="button" class="dropdown-option" data-value="Gemini">Gemini</button>
+              <button type="button" class="dropdown-option" data-value="Mistral">Mistral</button>
+            </div>
+            <input type="hidden" id="selectedLLM" name="llm" value="OpenAI" required />
+          </div>      
+        </div>
+        
+        <div class="settings-section">
+          <p>Model</p>
+          <div class="container-select">
+            <button type="button" id="dropdownBtnModel" class="select-input">
+              <span id="selectedTextModel">GPT-3.5</span>
+              <img src="../images/arrow.svg" alt="arrow" class="select-arrow" />
+            </button>
+            <div id="dropdownMenuModel" class="select-options">
+                <button type="button" class="dropdown-option" data-value="GPT-4o">GPT-4o</button>
+                <button type="button" class="dropdown-option" data-value="GPT-4o mini">GPT-4o mini</button>
+                <button type="button" class="dropdown-option" data-value="GPT-4.5">GPT-4.5</button>
+            </div>
+            <input type="hidden" id="selectedModel" name="state" value="OpenAI" required />
+          </div>
+        </div>
+        
+        <div class="settings-section">
+          <p>API Key</p>
+          <div class="api-key-input">
+            <input type="text" name="api-key" id="api-key" placeholder="**********************" autocomplete="off">
+            <button id="toggle-visibility" class="icon-button">
+              <img src="../images/eye-off.svg" alt="eye off"/>
+            </button>
+          </div>
+        </div>
+
+        <button id="update-btn" class="update-button">Update</button>
+      </div>
+      <div class="footer-links">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms of Service</a>
+      </div>
+  </div>
+
+  <script src="../js/settings.js"></script>
+  </body>
+  </html>
+</body>
+</html>
+

@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=optional');
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #929292;
+    border-radius: 4px;
+}
+
+@theme{
+    --font-display: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body{
+    @apply font-display tracking-[-0.03em];
+}
+
+header{
+    @apply max-w-[1312px] px-[32px] mx-auto;
+}
+
+.menu-container{
+    @apply flex justify-between items-center mt-[32px] md:mt-[45px];
+}
+
+header a img{
+    @apply h-[21px] md:h-[32px];
+}
+
+header .search-box {
+    @apply hidden md:flex bg-[#ECECEC] py-[12px] px-[24px] rounded-[26px] w-[460px] justify-between gap-[10px];
+}
+
+input{
+    @apply w-full outline-none placeholder-black/30;
+}
+
+header .search-box button{
+    @apply cursor-pointer;
+}
+
+header .search-box img{
+    @apply h-[32px] w-[32px];
+}
+
+header .nav-menu{
+    @apply flex items-center md:hidden;
+}
+
+header ul li{
+    @apply flex mb-[10px];
+}
+
+header ul a{
+    @apply w-full hover:bg-[#014751] hover:text-white focus:bg-[#014751] focus:text-white rounded-full px-[30px] py-[20px] text-[24px] font-[600];
+}
+
+.nav-mobile{
+    @apply h-screen bg-white mt-0 fixed w-full z-50 flex-col flex justify-start inset-0 px-[32px];
+}
+
+header #nav-info p{
+    @apply mb-[24px] font-[500] text-[16px] leading-[24px];
+}
+
+header #nav-info span{
+    @apply font-[400] text-[16px] leading-[24px] text-black/20;
+}
+
+.content-detail{
+    @apply w-full px-[32px] pt-[24px] md:pt-[103px] max-w-[1048px] mx-auto;
+}
+
+.heading{
+    @apply max-w-[992px] md:mx-auto md:text-center flex flex-col gap-[16px];
+}
+
+.alternate-heading{
+    @apply text-center;
+}
+
+.story-heading{
+    @apply md:text-left gap-[8px];
+}
+
+.story-heading h4{
+    @apply font-[600] text-[24px] text-black/50 hidden md:block;
+}
+
+.heading h2{
+    @apply text-[23px] font-[600] leading-[1.2] md:font-[700] md:text-[48px] md:leading-[64px];
+}
+
+.heading p{
+    @apply text-[16px] font-[300] leading-[24px] md:text-[24px] md:leading-[40px];
+}
+
+.search-content{
+    @apply md:hidden my-[40px] px-[24px] py-[12px] rounded-[50px] bg-[#ECECEC] w-full flex justify-between gap-[10px];
+}
+
+.search-content img{
+    @apply h-[24px] w-[24px];
+}
+
+.container-grid {
+    @apply md:mt-[104px] mb-[80px] md:mb-[104px] flex flex-wrap gap-x-[40px] gap-y-[40px] max-w-[1115px] lg:mx-auto lg:gap-x-[50px] lg:gap-y-[50px] justify-center; 
+}
+
+.grid-item{
+    @apply w-[242px] lg:w-[calc((100%/3)-40px)] bg-[#ECECEC] h-[242px] md:h-[250px] rounded-[5px] md:rounded-[12px] p-[24px] md:px-[18px] md:py-[36px] hover:bg-[#014751] hover:text-white focus:bg-[#014751] focus:text-white; 
+}
+
+.grid-item h3{
+    @apply font-[500] text-[24px] leading-[32px] md:font-[600] md:text-[30px] lg:text-[40px] md:leading-[52px];
+}
+
+.pagination{
+    @apply text-center mb-[95px] md:mb-[200px];
+}
+
+.page-mob{
+    @apply hidden md:block;
+}
+
+.pages{
+    @apply bg-[#C7C7C72B] flex justify-center items-center rounded-full mb-[16px] md:mb-[24px] font-medium text-[12px] md:text-[18px] p-[12px] w-fit mx-auto md:mx-auto md:p-[24px];
+}
+
+.pages button{
+    @apply mt-0 mx-[8px] md:mx-[11px] rounded-full cursor-pointer;
+}
+
+.number-btn{
+    @apply bg-transparent text-black h-10 w-10 md:h-12 md:w-12 hover:bg-[#014751] hover:text-white font-[600];
+}
+
+.active-page{
+    @apply bg-[#014751] text-white;
+}
+
+.pages span{
+    @apply block text-[18px] font-[500];
+}
+
+.previous-btn, .next-btn{
+    @apply text-black p-[12px] flex items-center font-[500]  md:px-[16px] md:py-[8px];
+}
+
+.previous-btn span, .next-btn span{
+    @apply hidden md:block px-[6px];
+}
+
+.previous-btn img{
+    @apply filter invert rotate-180;
+}
+
+.previous-btn{
+    @apply bg-[#929292]/40 opacity-[30%];
+}
+
+.next-btn{
+    @apply bg-[#014751] text-white hover:bg-[#014751] hover:text-white;
+}
+
+.pages img{
+    @apply mx-1;
+}
+
+.pagination .page-count{
+    @apply text-[13px] md:text-[18px] font-[600] text-black/30;
+}
+
+.content-text{
+    @apply mt-[40px] md:mt-[104px] mb-[96px] md:mb-[200px] flex flex-col gap-[24px];
+}
+
+.alt-color{
+    @apply text-black/80 gap-[16px];
+}
+
+.content-text p, .content-text ul li{
+    @apply font-[400] text-[16px] leading-[24px] md:text-[24px] md:leading-[40px] mb-[8px];
+}
+
+.content-text span{
+    @apply font-[700];
+}
+
+.content-text h3{
+    @apply font-[600] text-[20px] md:text-[32px];
+}
+
+.content-text ul li{
+    @apply list-disc list-inside ml-[10px] mb-[12px];
+} 
+
+.content-text a{
+    @apply underline;
+}
+
+.img-block, .feature-img{
+    @apply bg-[#444444] rounded-[12px] w-full h-[256px] sm:h-[450px] md:h-[673px];
+}
+
+.feature-img{
+    @apply my-[24px] overflow-hidden;
+}
+
+.feature-img img{
+    @apply w-full h-full object-cover;
+}
+
+footer{
+    @apply hidden md:block border-t-[2px] border-black/10 mx-auto max-w-[1120px] mb-[104px] px-[32px] xl:px-0 font-[500] text-[16px] text-black/50;
+}
+
+footer p{
+    @apply my-[80px] font-[500] text-[16px];
+}
+
+footer .footer-info{
+    @apply flex justify-between;
+}
+
+footer p{
+    @apply my-[80px];
+}
+
+footer span{
+    @apply font-[400];
+}
+
+.footer-nav{
+    @apply flex gap-[40px];
+}
+
+.footer-nav a{
+    @apply cursor-pointer;
+}
+
+.current-page{
+    @apply text-black border-b-[2px] border-[#014751];
+}
+
+.current-nav{
+    @apply text-white bg-[#014751];
+}
+
+.container-player{
+    @apply rounded-[8px] border border-[#1E252E]/20 p-[24px] md:p-[64px] max-w-[1120px] xl:mx-auto;
+}
+
+.audio-player{
+    @apply md:flex;
+}
+
+.audio-details{
+    @apply w-full md:flex flex-grow;
+}
+
+.waveform-container{
+    @apply w-full;
+}
+
+.waveform{
+    @apply mb-4 md:mb-2 h-[32px] md:h-[48px] md:mt-4;
+}
+
+.audio-time{
+    @apply flex justify-between text-sm mb-2;
+}
+
+.audio-time span{
+    @apply text-[#1E252E]/30 text-[8px] md:text-[14px];
+}
+
+.audio-duration{
+    @apply hidden md:block my-auto ml-10 text-[#1E252E]/50 text-[16px] font-medium whitespace-nowrap;
+}
+
+.audio-controls{
+    @apply flex justify-center space-x-4 h-full md:order-first md:mr-6 flex-shrink-0;
+}
+
+.audio-btn{
+    @apply h-[32px];
+}
+
+.play-btn, .pause-btn{
+    @apply h-[64px] md:h-[80px] bg-white text-[#014751] hover:bg-[#014751] hover:text-white;
+}
+
+.btn-playPause{
+    @apply rounded-full overflow-hidden;
+}
+
+.audio-info{
+    @apply w-full text-[16px] leading-[24px] md:leading-[40px];
+}
+
+.audio-info h3{
+    @apply my-[16px] font-medium md:my-[32px] md:text-[36px];
+}
+
+.audio-info p{
+    @apply text-black/50 text-ellipsis mb-[16px] md:text-[24px] md:mb-0;
+}
+
+.audio-info span{
+    @apply text-[12px] text-black/20 md:hidden;
+}
+
+.letter-article{
+    @apply max-w-[1120px] mx-auto px-8 2xl:px-0 md:mb-[72px] mt-8 md:mt-[96px];
+}
+
+.letter-article p, blockquote{
+    @apply text-[24px] leading-[40px] mb-[56px] md:text-[32px] md:leading-[48px];
+}
+
+.letter-article span{
+    @apply font-bold;
+}
+
+.letter-article a{
+    @apply underline;
+}
+
+blockquote{
+    @apply italic font-bold;
+}
+
+@layer components{
+    .open-menu{
+        @apply cursor-pointer h-[40px] w-[40px];
+    }
+
+    header .close-menu{
+        @apply hidden;
+    }
+
+    header ul{
+        @apply hidden mt-[71px];
+    }
+
+    header #nav-info{
+        @apply hidden mt-auto mb-[80px] max-w-[280px] mx-auto;
+    }
+
+    .video-bar{
+        @apply absolute top-0 left-0 h-full bg-[#014751] w-0 rounded-[40px];
+    }
+}

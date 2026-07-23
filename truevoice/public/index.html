@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="./images/favicon.png"/>
+    <title>TrueVoice</title>
+    <link href="./css/output.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header">
+    <div class="menu-container">
+      <a href="./">
+        <img src="./images/logo-truevoice.svg" alt="truevoice logo"/>
+      </a>
+
+      <div class="search-box">
+        <input type="text" id="search-input" name="search-input" placeholder="Search"/>
+        <button class="search-icon" id="search-btn">
+            <img src="./images/search-icon.svg" alt="search" id="searchBar-icon"/>
+        </button>
+      </div>
+
+      <div class="nav-menu">
+        <button class="open-menu" id="open-menu" aria-label="Toggle navigation menu">
+            <img id="menuIcon" src="./images/menu-icon.svg" alt="menu" class="menu-icon"/>
+            <img class="close-menu" id="close-menu" src="./images/close-icon.svg" alt="close menu"/>
+        </button>
+      </div>
+    </div>
+
+    <ul id="list">
+      <li><a href="./about/">About</a></li>
+      <li><a href="./browse/">Browse</a></li>
+      <li><a href="./featured/">Featured</a></li>
+    </ul>
+
+    <div id="nav-info">
+      <p>TrueVoice is the modern campfire. A place for stories to inspire your own personal journey.</p>
+      <span>© 2025 TrueVoice. Your story matters.</span>
+    </div>
+  </header>
+
+  <div class="content-detail">
+    <div class="heading">
+      <h2>
+        Everyone has a story. <br/> We celebrate those stories.
+      </h2>
+      <p>
+        True Voice is a podcast that explores the human journey and shares stories that feel familiar even when they are decades old. Our host takes listeners through an unedited conversation that provides an authentic and introspective look into the lives of interesting people.
+      </p>
+    </div>
+
+    <div class="search-content">
+      <input type="text" id="content-input" name="content-input" placeholder="Search"/>
+      <button class="search-icon" id="content-btn">
+          <img src="./images/search-icon.svg" alt="search" id="contentBar-icon"/>
+      </button>
+    </div>
+    
+    <div class="container-grid">
+        <a href="./featured/" class="grid-item">
+         <div class="grid-block">
+            <h3>
+              Organizing Change
+            </h3>
+         </div>
+        </a>
+        <a href="./featured/" class="grid-item">
+          <div class="grid-block">
+             <h3>
+              The Boy From The Ditch
+             </h3>
+          </div>
+        </a>
+        <a href="./featured/" class="grid-item">
+          <div class="grid-block">
+             <h3>
+              The Educated Mind & Body
+             </h3>
+          </div>
+        </a>
+        <a href="./featured/" class="grid-item">
+          <div class="grid-block">
+             <h3>
+              The Model Activist
+             </h3>
+          </div>
+        </a>
+        <a href="./featured/" class="grid-item">
+          <div class="grid-block">
+             <h3>
+              A Bias For Action
+             </h3>
+          </div>
+        </a>
+        <a href="./featured/" class="grid-item page-mob">
+          <div class="grid-block">
+             <h3>
+              Lupus Awareness Part 1
+             </h3>
+          </div>
+        </a>
+        <a href="./featured/" class="grid-item page-mob">
+          <div class="grid-block">
+             <h3>
+              Regulating Medicine
+             </h3>
+          </div>
+        </a>
+        <a href="./featured/" class="grid-item page-mob">
+          <div class="grid-block">
+             <h3>
+              Creation Science
+             </h3>
+          </div>
+        </a>
+        <a href="./featured/" class="grid-item page-mob">
+          <div class="grid-block">
+             <h3>
+              Protecting Medical Professionals
+             </h3>
+          </div>
+        </a>
+        <a href="./featured/" class="grid-item page-mob">
+          <div class="grid-block">
+             <h3>
+              Saving Lives And His Own
+             </h3>
+          </div>
+        </a>
+        <a href="./featured/" class="grid-item page-mob">
+          <div class="grid-block">
+             <h3>
+              Running With Drums
+             </h3>
+          </div>
+        </a>
+        <a href="./featured/" class="grid-item page-mob">
+          <div class="grid-block">
+             <h3>
+              Sculpting Our History
+             </h3>
+          </div>
+        </a>
+     </div> 
+
+     <div class="pagination">
+         <div class="pages">
+             <button class="previous-btn">
+                 <img src="./images/right.svg"/> 
+                 <span>Previous</span>
+             </button>
+             <button class="number-btn active-page">
+                 1
+             </button>
+             <button class="number-btn">
+                 2
+             </button>
+             <button class="number-btn page-mob">
+                 ...
+             </button>
+             <button class="number-btn page-mob">
+                 98
+             </button>
+             <button class="number-btn page-mob">
+                 99
+             </button>
+             <button class="next-btn">
+                 <span>Next</span>
+                 <img src="./images/right.svg"/> 
+             </button>
+         </div>
+         <p class="page-count">
+             Showing 12 of 100 results
+         </p>
+     </div>
+  </div>
+  
+  <footer>
+    <p>
+      TrueVoice is the modern campfire. A place for stories to inspire your own personal journey.
+    </p>
+    <div class="footer-info">
+      <span>© 2025 TrueVoice. Your story matters.</span>
+      <div class="footer-nav">
+        <a href="./about/">About</a>
+        <a href="./browse/">Browse</a>
+        <a href="./featured/">Featured</a>
+      </div>
+    </div>
+  </footer>
+<script src="./js/header.js"></script>
+<script src="./js/search.js"></script>
+</body>
+</html>
