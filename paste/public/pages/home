@@ -89,7 +89,7 @@
             <div class="recent-jobs">
                 <div class="content-header">
                     <h3>Recent Jobs</h3>
-                    <a href="./view-all.html">View all</a>
+                    <a href="./view-all">View all</a>
                 </div>
                 <div class="recent-jobs-list">
                     <div id="job-skeleton" class="job-skeleton">
@@ -290,7 +290,7 @@
             <div class="recent-jobs">
                 <div class="content-header">
                     <h3>Recent Jobs</h3>
-                    <a href="./view-all.html">View all</a>
+                    <a href="./view-all">View all</a>
                 </div>
                 <div class="recent-jobs-list">
                     <div id="job-skeleton" class="job-skeleton">
@@ -392,7 +392,7 @@
             <div class="recent-jobs">
                 <div class="content-header">
                     <h3>Recent Jobs</h3>
-                    <a href="./view-all.html">View all</a>
+                    <a href="./view-all">View all</a>
                 </div>
                 <div class="recent-jobs-list">
                     <div id="job-skeleton" class="job-skeleton">
