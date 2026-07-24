@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat</title>
+    <link href="./css/output.css" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <header id="header">
+            <a href="./">
+                <div class="logo"></div>
+                <span>Simple Chat</span>
+            </a>
+            <p>Built for fast talk.</p>
+        </header>
+
+        <div class="overlay" id="gradient-overlay"></div>
+        
+        <div class="content-container"> 
+            <div class="heading-container">
+                <span>Today 9:19AM</span>
+
+                <div class="card">
+                    <p>Hi there! Need help getting started?</p>
+                </div>
+            </div>
+    
+            <div class="questions-container">
+                <div class="card">
+                    <p>Question:<br/>What would you like to do?</p>
+                </div>
+                    
+                <div class="card">
+                    <div class="number">1</div>
+                    <p>Check account status</p>
+                </div>
+                    
+                <div class="card">
+                    <div class="number">2</div>
+                    <p>Talk to support</p>
+                </div>
+                    
+                <div class="card">
+                    <div class="number">3</div>
+                    <p>Learn about this app</p>
+                </div>
+                    
+                <button class="action-btn" data-text-xl="Press ‘ESC’ to cancel" data-text-default="Tap to cancel">
+                    Tap to cancel
+                </button>
+            </div>
+    
+            <div class="card">
+                <span>@support</span>
+                <p>Hey! I'm Jamie. How can I help today?</p>
+            </div>
+    
+            <div class="dates-container">
+                <p>Today 9:19AM</p>
+                <div class="card subtle">
+                    <p>Hello, I just have a question...</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="chatbox">
+            <div>
+                <div class="inputs">
+                    <input type="text" id="message-input" placeholder="Write your message" maxlength="160">
+                    <div class="status-input">
+                        <button class="submit-btn" id="message-submit">Submit</button>
+                    </div>
+                </div>
+                <span class="char-count" id="char-count">0/160</span>
+            </div>
+            <div class="chat-info">
+                <p>Type /help for help.</p>
+                <span>SimpleChat © 2025</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/input.js"></script>
+</body>
+</html>
