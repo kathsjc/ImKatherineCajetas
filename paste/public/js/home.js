@@ -31,15 +31,15 @@ workersBtn?.addEventListener('click', (event) => {
 });
 
 settingsBtn.addEventListener('click', function() {
-    window.location.href = 'settings.html';
+    window.location.href = './settings';
 });
 
 document.querySelector('header h1').addEventListener('click', function() {
-    window.location.href = 'home.html';
+    window.location.href = './home';
 });
 
 document.getElementById('backBtn')?.addEventListener('click', function() {
-    window.location.href = 'home.html';
+    window.location.href = './home';
 });
 
 document.getElementById('close-rewriter')?.addEventListener('click', function() {
